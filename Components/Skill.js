@@ -138,6 +138,7 @@ const Skill = () => {
                 {
                  type: "spring",
                  stiffness: 100,
+                 
                  duration:1.5,
                 }
                }
