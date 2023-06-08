@@ -1,0 +1,101 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@300&family=Poppins:wght@300;500&display=swap');
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-sendiri{
+  color: #05BFDB;
+}
+html,body{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body{
+  background: #020617;
+  color: white;
+}
+
+.hov{
+  /* overflow-x: hidden; */
+
+  position: relative;
+  display: block;
+
+}
+
+.hov::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+  background: #020617;
+  width: 100%;
+  transition: 0.5s;
+  height: 0%;
+}
+.hov:hover::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+  background: white;
+  width: 100%;
+  height: 100%;
+}
+.hov span {
+  position: relative;
+  z-index: 1;
+  /* Additional styling for the text */
+  color: white;
+  font-size: 18px;
+  transition: 0.5s;
+  padding: 10px;
+}
+.hov:hover span{
+  color: black;
+}
+
+@media (max-width:840px) {
+  .hov h1{
+    transition: 0.2s;
+    transform: translateY(0px);
+    position: absolute;
+    opacity: 0;
+    font-size: 15px;
+  }
+  .hov:hover h1{
+    transform: translateY(40px);
+    opacity: 1;
+    color: white;
+  }
+  
+}
+.hovpro h1{
+  transition: 0.5s;
+  scale: 0;
+}
+.hovpro:hover h1{
+  opacity: 1;
+  scale: 1;
+  transform: translateY(80px);
+}
+
+.categoryslide .swiper-button-prev,.categoryslide .swiper-button-next{
+  color: white;
+}
+
+
+@media(max-width:768px){
+
+  .categoryslide .swiper-button-prev{
+    transform: translate(-10px,25px);
+   
+  }
+  .categoryslide .swiper-button-next{
+    transform: translate(10px,25px);
+  }
+}
