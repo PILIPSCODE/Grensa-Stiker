@@ -22,8 +22,7 @@ const Desain = ({Contact}) => {
    
   ];
 
-  const stik = [
-  ];
+
   return (
     <section className="font-popins mt-6">
       <div className="flex justify-center md:ms-6">
