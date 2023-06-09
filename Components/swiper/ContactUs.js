@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { BsChatFill, BsMapFill, BsTelephoneFill } from "react-icons/bs";
 import { AnimatePresence, motion } from "framer-motion";
 
-const ContactUs = () => {
+const ContactUs = ({ligtmode}) => {
   const [Nama, setNama] = useState("");
   const [ig, setig] = useState("");
   const [Pesan, setPesan] = useState("");
@@ -15,7 +15,7 @@ const ContactUs = () => {
   };
   return (
     <>
-      <section className="py-20  bg-gradient-to-b from-slate-950 to-purple-900">
+      <section className={`pb-10 pt-40 ${ligtmode ? " bg-gradient-to-b from-slate-300 to-purple-900 text-black" : " bg-gradient-to-b text-white from-slate-950 to-purple-900"}`}>
         <div className="flex text-5xl font-popins justify-start">
           <motion.h1
             initial={{ x: 200, opacity: 0 }}
@@ -63,7 +63,7 @@ const ContactUs = () => {
                 placeholder="Nama?"
                 value={Nama}
                 required
-                className="w-full  border h-14 ps-2 rounded-md bg-transparent"
+                className={`w-full  border-2 h-14 ps-2 rounded-md bg-transparent`}
                 onChange={(e) => setNama(e.target.value)}
               ></motion.input>
               <motion.input
@@ -80,7 +80,7 @@ const ContactUs = () => {
                 value={ig}
                 required
                 onChange={(e) => setig(e.target.value)}
-                className="w-full border h-14 ps-2 rounded-md bg-transparent"
+                className="w-full border-2 h-14 ps-2 rounded-md bg-transparent"
               ></motion.input>
               <motion.textarea
                 initial={{ y: 100, opacity: 0 }}
@@ -96,7 +96,7 @@ const ContactUs = () => {
                 value={Pesan}
                 required
                 onChange={(e) => setPesan(e.target.value)}
-                className="w-full border h-28 ps-2 rounded-md bg-transparent"
+                className="w-full border-2 h-28 ps-2 rounded-md bg-transparent"
               ></motion.textarea>
               <div>
                 <motion.button

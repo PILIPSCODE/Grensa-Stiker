@@ -26,7 +26,7 @@ function Footer({ SkillRef, Home, Desain, Contact }) {
     <>
       <div
         onClick={Homeroute}
-        className=" text-3xl fixed right-10 bottom-40 bg-white text-black rounded-xl p-3"
+        className=" text-3xl fixed right-10 bottom-40 z-50 bg-white text-black rounded-xl p-3"
       >
         <motion.h1
         transition={{

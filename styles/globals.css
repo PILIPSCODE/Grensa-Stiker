@@ -85,7 +85,8 @@ body{
 }
 
 .categoryslide .swiper-button-prev,.categoryslide .swiper-button-next{
-  color: white;
+  mix-blend-mode: difference;
+  background-blend-mode: difference;
 }
 
 

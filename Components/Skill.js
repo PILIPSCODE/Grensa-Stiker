@@ -5,7 +5,7 @@ import { BsPencilFill, BsXCircle } from "react-icons/bs";
 import SwiperPRO from "./swiper/SwiperPro";
 import SwiperproAi from "./swiper/SwiperproAi";
 
-const Skill = () => {
+const Skill = ({ligtmode}) => {
   const [corelpro, setcorelpro] = useState(false);
   const variants ={
     masuk:{
@@ -30,7 +30,7 @@ const Skill = () => {
   return (
     <AnimatePresence>
 
-    <section id="skill" className="font-popins pt-10 mt-3 overflow-x-hidden">
+    <section id="skill" className={`font-popins pt-10  overflow-x-hidden ${ligtmode ?"bg-slate-300 text-slate-950":" bg-slate-950 text-white" }`}>
       <div className="flex justify-center md:ms-6 md:justify-start ">
         <motion.h1 
          initial={{ x:-100,opacity:0 }}
@@ -41,7 +41,7 @@ const Skill = () => {
            stiffness: 260,
          }}
          viewport={{once:true}}
-        className="text-5xl font-bold flex gap-2 border rounded-lg p-2">
+        className={`text-5xl font-bold flex gap-2 border ${ligtmode ? "border-black" :""} rounded-lg p-2`}>
           <BsPencilFill />
           Skill
         </motion.h1>
@@ -63,7 +63,7 @@ const Skill = () => {
           initial="keluar"
           whileInView="masuk"
           viewport={{once:true}}
-           className="flex  max-md:w-full gap-3 max-md:items-center p-10 max-md:flex-col  bg-gradient-to-r from-slate-800 to-slate-950">
+           className={`flex  max-md:w-full gap-3 max-md:items-center p-10 max-md:flex-col ${ligtmode ? "bg-gradient-to-r from-slate-200 to-slate-300" : "bg-gradient-to-r from-slate-800 to-slate-950"} `}>
             <div className="w-full">
               <motion.div 
               initial={false}
@@ -129,7 +129,7 @@ const Skill = () => {
             initial="keluar"
             whileInView="masuk"
             viewport={{once:true}}
-           className="flex  gap-3  max-md:w-full max-md:items-center p-10 max-md:flex-col bg-gradient-to-r from-slate-950 to-slate-800">
+           className={`flex  gap-3  max-md:w-full max-md:items-center p-10 max-md:flex-col ${ligtmode ? "bg-gradient-to-r from-slate-300 to-slate-200" : "bg-gradient-to-r from-slate-950 to-slate-800"}`}>
             <div className="w-full">
               <motion.div
                initial={false}

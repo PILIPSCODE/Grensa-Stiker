@@ -3,10 +3,10 @@ import { AnimatePresence } from "framer-motion";
 import React from "react";
 import { motion } from "framer-motion";
 import { BsFacebook, BsInstagram,} from "react-icons/bs";
-function Hero() {
+function Hero({ligtmode}) {
   return (
     <AnimatePresence>
-    <section id="home" className="flex flex-col w-screen h-screen md:flex-row-reverse  bg-gradient-to-t from-slate-950 via-slate-950 to-gray-800 text-white overflow-x-hidden">
+    <section id="home" className={`flex flex-col w-screen duration-150 h-screen md:flex-row-reverse ${ligtmode ? "bg-gradient-to-t from-slate-300 via-slate-300 to-gray-500 text-black" :"bg-gradient-to-t from-slate-950 via-slate-950 to-gray-800 text-white"}  overflow-x-hidden`}>
       <motion.div 
         initial={{ scale: 0 }}
         animate={{ rotate: 360, scale: 1 }}

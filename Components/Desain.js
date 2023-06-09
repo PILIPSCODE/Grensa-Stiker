@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-const Desain = ({Contact}) => {
+const Desain = ({Contact,ligtmode}) => {
   const [muncul,setmuncul] = useState("")
   const ContactRoute = () => {
     Contact.current.scrollIntoView({ block: "start", behavior: "smooth" })
@@ -24,7 +24,7 @@ const Desain = ({Contact}) => {
 
 
   return (
-    <section className="font-popins mt-6">
+    <section className={`font-popins pt-28 ${ligtmode ? "bg-slate-300 text-black" : "bg-slate-950 text-white"} `}>
       <div className="flex justify-center md:ms-6">
         <div className="text-5xl max-md:text-3xl font-bold flexp-2 text-center">
           <motion.h1 
@@ -37,7 +37,7 @@ const Desain = ({Contact}) => {
              stiffness: 260,
            }}
            viewport={{once:true}}
-          className="bg-gradient-to-r pb-3 from-blue-200 to-cyan-200 bg-clip-text text-transparent">
+          className={ligtmode ?"" : "bg-gradient-to-r pb-3 from-blue-200 to-cyan-200 bg-clip-text text-transparent"}>
             {" "}
             Desain Stiker yang biasa ku jual
           </motion.h1>
@@ -52,11 +52,11 @@ const Desain = ({Contact}) => {
            }}
            className="mt-1">
             Beli{" "}
-            <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+            <span className={ ligtmode ?"" : "bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent"}>
               Stiker
             </span>
             /
-            <span className="bg-gradient-to-r from-teal-200 to-teal-500 bg-clip-text text-transparent">
+            <span className={ligtmode ? "" : "bg-gradient-to-r from-teal-200 to-teal-500 bg-clip-text text-transparent"}>
               Desain
             </span>
             ?
